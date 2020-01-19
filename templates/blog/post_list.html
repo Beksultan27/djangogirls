@@ -7,15 +7,16 @@
             <h1><a href="/">HOME WORK</a></h1>
         </div>
 
-        <div>
-            <p>published: 19.01.2020, 21:40 PM</p>
-            <h2><a href="">My first post</a></h2>
-            <p>LEARNING DJANGO</p>
-        </div>
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+        {% endfor %}
 
-
         <div>
-            <p>published: 19.01.2020, 21:45 PM</p>
+            <p>publiszed: 19.01.2020, 21:45 PM</p>
             <h2><a href="">My second post</a></h2>
             <p>Успех напрямую зависит от того, сколько труда ты вложил в дело</p>
         </div>
